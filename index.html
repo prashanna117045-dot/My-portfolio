@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+            display: block;
+            min-height: 1.2em;
+            margin-top: 4px;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" autocomplete="name" aria-describedby="nameError">
+        <span id="nameError" class="error" aria-live="polite"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+        <span id="emailError" class="error" aria-live="polite"></span>
+        <br><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" aria-describedby="commentError"></textarea>
+        <span id="commentError" class="error" aria-live="polite"></span>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

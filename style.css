@@ -1,0 +1,468 @@
+
+Style · CSS
+/* ---------- Variables ---------- */
+:root {
+    --ink: #112240;
+    --yellow: #ffd23f;
+    --blue: #3a5bff;
+    --blue-dark: #2641d1;
+    --paper: #f4f6ff;
+    --white: #ffffff;
+    --muted: #4a5878;
+    --border: 3px solid var(--ink);
+    --shadow: 6px 6px 0 var(--ink);
+    --max-width: 1080px;
+}
+ 
+/* ---------- Reset and base ---------- */
+* {
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--paper);
+}
+ 
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.15;
+    margin: 0;
+}
+ 
+a {
+    color: inherit;
+}
+ 
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+ 
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+ 
+/* ---------- Header ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--white);
+    border-bottom: var(--border);
+}
+ 
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 70px;
+}
+ 
+.brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+.nav-list a {
+    display: block;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+ 
+.nav-list a:hover {
+    background: var(--yellow);
+}
+ 
+/* ---------- Hero ---------- */
+.hero {
+    padding: 5rem 0;
+    background: var(--yellow);
+    border-bottom: var(--border);
+}
+ 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+ 
+.tagline {
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.25rem 0.9rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: 999px;
+    font-weight: 600;
+}
+ 
+.hero h1 {
+    font-size: 3.4rem;
+    letter-spacing: -1px;
+}
+ 
+.hero-text {
+    max-width: 520px;
+    margin: 1.25rem 0 0;
+    font-size: 1.15rem;
+}
+ 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+ 
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: var(--border);
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+ 
+.button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+ 
+.primary {
+    background: var(--blue);
+    color: var(--white);
+}
+ 
+.primary:hover {
+    background: var(--blue-dark);
+}
+ 
+.secondary {
+    background: var(--white);
+    color: var(--ink);
+}
+ 
+/* Profile image */
+.profile-card {
+    margin: 0;
+    padding: 0.75rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 var(--ink);
+    transform: rotate(2deg);
+}
+ 
+.profile-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+ 
+/* ---------- Sections ---------- */
+.section {
+    padding: 5rem 0;
+}
+ 
+.alt {
+    background: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+ 
+.section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+}
+ 
+/* About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+ 
+.about-text p {
+    margin: 0 0 1rem;
+    max-width: 560px;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+ 
+.highlight {
+    padding: 1.75rem;
+    background: var(--blue);
+    color: var(--white);
+    border: var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+ 
+.highlight h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+ 
+.highlight p {
+    margin: 0;
+}
+ 
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+}
+ 
+.skill {
+    padding: 1.5rem;
+    border: var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+ 
+.skill-html { background: #ffe0d6; }
+.skill-css  { background: #d8e2ff; }
+.skill-js   { background: #fff2b8; }
+.skill-git  { background: #d6f5e3; }
+ 
+.skills-grid dt {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+ 
+.skills-grid dd {
+    margin: 0.4rem 0 0;
+}
+ 
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+ 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+ 
+.project-card:hover {
+    transform: translateY(-4px);
+}
+ 
+.project-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+}
+ 
+.project-card p {
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+}
+ 
+.project-card a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-bottom: 2px;
+    border-bottom: 3px solid var(--yellow);
+    font-weight: 700;
+    text-decoration: none;
+}
+ 
+.project-card a:hover {
+    border-bottom-color: var(--blue);
+}
+ 
+/* Contact */
+.contact-section {
+    background: var(--blue);
+    color: var(--white);
+    border-top: var(--border);
+}
+ 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+}
+ 
+.contact-intro p {
+    max-width: 380px;
+    font-size: 1.1rem;
+}
+ 
+.contact-form {
+    display: grid;
+    gap: 1.1rem;
+    padding: 2rem;
+    background: var(--white);
+    color: var(--ink);
+    border: var(--border);
+    border-radius: 16px;
+    box-shadow: 8px 8px 0 var(--ink);
+}
+ 
+.form-row {
+    display: grid;
+    gap: 0.35rem;
+}
+ 
+.form-row label {
+    font-weight: 700;
+}
+ 
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    font: inherit;
+    background: var(--paper);
+}
+ 
+.form-row input:focus,
+.form-row textarea:focus {
+    background: var(--white);
+}
+ 
+.form-row textarea {
+    resize: vertical;
+}
+ 
+.contact-form .button {
+    justify-self: start;
+}
+ 
+/* ---------- Footer ---------- */
+.site-footer {
+    background: var(--ink);
+    color: #c7d0e6;
+}
+ 
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    min-height: 90px;
+}
+ 
+.footer-wrap p {
+    margin: 0;
+}
+ 
+.footer-wrap a {
+    color: var(--yellow);
+    font-weight: 600;
+    text-decoration: none;
+}
+ 
+.footer-wrap a:hover {
+    text-decoration: underline;
+}
+ 
+/* ---------- Tablet and mobile ---------- */
+@media (max-width: 800px) {
+    .hero {
+        padding: 3.5rem 0;
+    }
+ 
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+ 
+    .hero-grid,
+    .about-grid,
+    .contact-grid,
+    .project-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .hero-grid {
+        gap: 2.5rem;
+    }
+ 
+    .profile-card {
+        max-width: 320px;
+    }
+ 
+    .section {
+        padding: 3.5rem 0;
+    }
+}
+ 
+@media (max-width: 520px) {
+    .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 0;
+        gap: 0.5rem;
+    }
+ 
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+ 
+    .hero-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+ 
+    .footer-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25rem 0;
+    }
+}
+ 
+Notifications are turned off for Claude. Enable them in System Settings to get alerts when Claude finishes a task.
